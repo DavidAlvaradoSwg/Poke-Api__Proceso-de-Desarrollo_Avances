@@ -1,0 +1,94 @@
+$neon-cyan: #00f3ff
+$neon-purple: #b500fe
+$neon-pink: #ff007f
+$card-bg: rgba(25, 20, 50, 0.75)
+
+.header
+  text-align: center
+  padding: 2.5rem 1rem 1.5rem
+
+.logo-container
+  display: flex
+  align-items: center
+  justify-content: center
+  gap: 12px
+
+.pokeball-icon
+  width: 35px
+  height: 35px
+  border-radius: 50%
+  border: 4px solid $neon-cyan
+  background: linear-gradient(180deg, $neon-pink 50%, #fff 50%)
+  box-shadow: 0 0 15px $neon-cyan
+
+  h1
+    font-family: 'Orbitron', sans-serif
+    font-size: 2.5rem
+    letter-spacing: 2px
+    color: #fff
+    text-shadow: 0 0 10px $neon-purple
+
+    span
+      color: $neon-cyan
+
+.subtitle
+  color: #a0a5c0
+  font-size: 1.1rem
+  margin-top: 5px
+
+.search-box
+  max-width: 550px
+  margin: 1.8rem auto 0
+  display: flex
+  gap: 10px
+  padding: 0 1rem
+
+input
+  flex: 1
+  padding: 0.8rem 1.2rem
+  background: rgba(10, 8, 25, 0.8)
+  border: 2px solid $neon-purple
+  border-radius: 8px
+  color: #fff
+  font-size: 1rem
+  font-family: Arial, Helvetica, sans-serif
+  outline: none
+  transition: all 0.3s ease
+
+  &:focus
+    border-color: $neon-cyan
+    box-shadow: 0 0 12px rgba(0, 245, 255, 0.3)
+
+  button
+    padding: 0.8rem 1.5rem
+    background: linear-gradient(135deg, $neon-purple, $neon-pink)
+    border: none
+    border-radius: 8px
+    color: #fff
+    font-family: Arial, Helvetica, sans-serif
+    font-weight: bold
+    cursor: pointer
+    transition: transform 0.2s ease, box-shadow 0.2s ease
+
+    &:hover
+      transform: translateY(-2px)
+      box-shadow: 0 0 15px $neon-pink
+
+  .stats-grid
+    display: flex
+    flex-direction: column
+    gap 8px
+    margin-top: 1rem
+
+.stat-item
+  display: flex
+  justify-content: space-between
+  aling-items: center
+  font-family: 'Orbitron', sans-serif
+  font-size: 0.85rem
+
+.stat-label
+  color: #a0a5c0
+  text-transform: uppercase
+  letter-spacing: 1px
+

@@ -1,0 +1,66 @@
+<header class="header">
+  <div class="logo-container">
+    <div class="pokeball-icon"></div>
+    <h1>CYBER <span>POKEDEX</span></h1>
+  </div>
+  <p class="subtitle">Stream Edition * Powered by PokeApi & VSC ANGULAR</p>
+  <div class="search-box">
+    <input type="text" placeholder="Busca por nombre o numero." [ngModel]="searchTerm()"
+      (ngModelChange)="searchTerm.set($event)" (keyup.enter)="searchDirectly()">
+    <button (click)="searchDirectly()">
+      BUSCAR
+    </button>
+  </div>
+</header>
+<main class="container">
+  @if (loading()) {
+  <div class="loader-container">
+    <div class="cyber-spinner"></div>
+    <p> Cargando Pokedex.</p>
+  </div>
+  }
+  @if (errorMessage()){
+  <div class="error-banner">
+    {{errorMessage()}}
+  </div>
+  }
+  @if (!loading()){
+  <div class="grid">
+    @for (s of pokemon.stats.slice(0, 4); track s.stat.name) {
+    <div class="stat-item">
+
+         <span class="stat-label">{{ s.stat.name.id }}</span>
+         <div class="bar-container">
+         <div class = "bar" [style.width.%]="(s.base_stat / 180) * 100"></div>
+        </div>
+        <span class = "stat-value">{{ s.base_stat }} </span>
+        </div>
+      }
+      </div>
+      <div class="card-image">
+        <img
+          [src]="pokemon.sprites.other['official-artwork'].front_default || 'https://via.placeholder.com/150'"
+          [alt]="pokemon.name"
+          />
+      </div>
+
+      <div class="card-body">
+        <h2 class="pokemon-name">{{ pokemon.name }}</h2>
+
+        <div class="stats-grid">
+          @for (s of pokemon.stats.slice(0, 4); track s.stat.name) {
+          <div class="stat-item">
+            <span class = "stat-label">{{ s.stat.name }}</span>
+            <div class="bar-container">
+                <div class="bar" [style.width.%]="(s.base_stat / 180) * 100"></div>
+              </div>
+              <span class="stat-value">{{ s.base_stat }}</span>
+            </div>
+            }
+          </div>
+        </div>
+      </div>
+      }
+    </div>
+    }
+</main>
