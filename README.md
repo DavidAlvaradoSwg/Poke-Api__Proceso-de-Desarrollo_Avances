@@ -68,4 +68,4 @@ For more information on using the Angular CLI, including detailed command refere
 Credits: YouTube Programmation Videos - Universidad Mariano Gálvez de Guatemala - CAMPUS VILLA NUEVA. 
 INGENIERÍA EN SISTEMAS DE COMPUTACIÓN
 **************************************************
-About: Twitch.tv/SWATTGT YouTube.com/@SWATTGT // J. David S. Alvarado - David Alvarado. AMATITLÁN - GUATEMALA
+ J. David S. Alvarado - David Alvarado. AMATITLÁN - GUATEMALA
